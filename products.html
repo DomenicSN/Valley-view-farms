@@ -132,6 +132,13 @@
 			box-sizing: border-box;
 		}
 
+		@media screen and (max-width: 768px) {
+			.products-grid {
+				grid-template-columns: repeat(2, 1fr); /* Force at least 2 items per row */
+			}
+		}
+
+
 
         .uploaded-item {
             display: flex;
