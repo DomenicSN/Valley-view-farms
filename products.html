@@ -122,11 +122,20 @@
             box-sizing: border-box;
         }
 
-        .products-grid img {
-    margin: 10px; /* Adds space around each image */
-    width: 100%; /* Ensures the image stays responsive */
-    border-radius: 5px; /* Optional: Adds rounded corners to the images */
-}
+        .products-grid {
+			display: flex;
+			flex-wrap: wrap; /* Enables wrapping of items */
+			justify-content: center; /* Centers the items horizontally */
+			gap: 15px; /* Space between images */
+		}
+
+		.products-grid img {
+			width: 150px; /* Set a fixed width for images */
+			height: 150px; /* Set a fixed height for uniform size */
+			object-fit: cover; /* Ensure images maintain their aspect ratio */
+			border-radius: 5px; /* Optional: Adds rounded corners */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+		}
 
 
 		
