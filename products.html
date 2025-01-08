@@ -20,22 +20,23 @@
             color: #2C6E49;
         }
 
-       /* Header Styling */
+        /* Header Styling */
         header {
             background-color: #4CAF50;
             color: white;
             padding: 20px 0;
             display: flex;
-            justify-content: flex-start; /* Align items to the start */
+            justify-content: flex-start;
             align-items: center;
             padding-left: 20px;
             padding-right: 20px;
+            position: relative;
         }
 
         header h1 {
             font-size: 1.5rem;
             font-weight: bold;
-            margin-left: 10px; /* Space between the menu icon and the website name */
+            margin-right: 30px;
         }
 
         .menu-toggle-container {
@@ -123,29 +124,13 @@
         }
 
         .products-grid {
-			display: flex;
-			flex-wrap: wrap; /* Enables wrapping of items */
-			justify-content: center; /* Centers the items horizontally */
-			gap: 15px; /* Space between images */
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+			gap: 20px;
+			padding: 20px;
+			width: 100%;
+			box-sizing: border-box;
 		}
-
-		.products-grid img {
-			width: 150px; /* Set a fixed width for images */
-			height: 150px; /* Set a fixed height for uniform size */
-			object-fit: cover; /* Ensure images maintain their aspect ratio */
-			border-radius: 5px; /* Optional: Adds rounded corners */
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-		}
-
-
-		
-		@media (max-width: 600px) {
-			.products-grid {
-				grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-				gap: 10px;
-			}
-		}
-
 
 
         .uploaded-item {
