@@ -36,7 +36,7 @@
         header h1 {
             font-size: 1.5rem;
             font-weight: bold;
-            margin-right: 30px;
+            margin-right: 10px;
         }
 
         .menu-toggle-container {
@@ -51,7 +51,7 @@
             padding: 8px;
             width: 50px;
             height: 60px;
-            margin-right: 20px;
+            margin-right: 10px;
         }
 
         .menu-toggle {
@@ -132,32 +132,38 @@
 			box-sizing: border-box;
 		}
 
-		@media screen and (max-width: 768px) {
-			.products-grid {
-				grid-template-columns: repeat(3, 0.5fr); /* Force at least 2 items per row */
-				place-items: left; /* Centers items in their grid cells */
-			}
-		}
-
-
-
+		
 
         .uploaded-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            margin: 10px;
-            position: relative;
-        }
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			margin: 10px;
+			position: relative;
+		}
 
-        .uploaded-item img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-        }
+		.uploaded-item img {
+			width: 100%;
+			max-width: 200px; /* Limit the width of images to prevent overflow */
+			height: 100px;
+			object-fit: cover;
+			border-radius: 8px;
+			cursor: pointer;
+		}
+
+		@media only screen and (max-width: 768px) {
+			/* For portrait screens, adjust the grid to ensure it stays within the container */
+			.products-grid {
+				grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Smaller columns for mobile screens */
+				padding: 10px; /* Reduced padding for mobile screens */
+			}
+
+			.uploaded-item img {
+				max-width: 100%; /* Make sure images do not overflow on small screens */
+				height: auto;
+			}
+		}
 
         .uploaded-item button {
             padding: 5px 10px;
