@@ -122,12 +122,12 @@
             box-sizing: border-box;
         }
 
-        .products-grid {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive column layout */
-			gap: 100px; /* Increased gap to create more space */
-			padding-top: 20px;
-		}
+        .products-grid img {
+    margin: 10px; /* Adds space around each image */
+    width: 100%; /* Ensures the image stays responsive */
+    border-radius: 5px; /* Optional: Adds rounded corners to the images */
+}
+
 
 		
 		@media (max-width: 600px) {
